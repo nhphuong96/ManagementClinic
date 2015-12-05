@@ -17,5 +17,16 @@ namespace Hospital_Pilot
         {
             InitializeComponent();
         }
+
+        private void frmTicket_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

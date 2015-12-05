@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
             this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();
@@ -48,12 +49,14 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.boxTicket = new System.Windows.Forms.GroupBox();
             this.Ticket_btn = new DevExpress.XtraEditors.SimpleButton();
+            this.mdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.boxKhamBenh.SuspendLayout();
             this.boxThuoc.SuspendLayout();
             this.boxNhanVien.SuspendLayout();
             this.boxTicket.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mdiManager)).BeginInit();
             this.SuspendLayout();
             // 
             // tileGroup1
@@ -258,6 +261,11 @@
             this.Ticket_btn.TabIndex = 2;
             this.Ticket_btn.Tag = "";
             this.Ticket_btn.Text = "In phiếu";
+            this.Ticket_btn.Click += new System.EventHandler(this.Ticket_btn_Click);
+            // 
+            // mdiManager
+            // 
+            this.mdiManager.MdiParent = this;
             // 
             // frmMain
             // 
@@ -285,6 +293,7 @@
             this.boxNhanVien.ResumeLayout(false);
             this.boxNhanVien.PerformLayout();
             this.boxTicket.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mdiManager)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +319,7 @@
         private DevExpress.XtraEditors.SimpleButton Setting_btn;
         private DevExpress.XtraEditors.SimpleButton Exit_btn;
         private DevExpress.XtraEditors.SimpleButton Logout_btn;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdiManager;
 
 
 

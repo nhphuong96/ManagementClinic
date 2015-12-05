@@ -91,5 +91,12 @@ namespace Hospital_Pilot
             Logout_btn.Enabled = false;
             Login_btn.Enabled = true;
         }
+
+        private void Ticket_btn_Click(object sender, EventArgs e)
+        {
+            frmTicket frmTicket = new frmTicket();
+            frmTicket.MdiParent = this;
+            frmTicket.Show();
+        }
     }
 }
