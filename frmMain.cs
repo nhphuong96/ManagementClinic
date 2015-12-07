@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
+using System.Threading.Tasks;
 
 
 namespace Hospital_Pilot
 {
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
+        frmTicket frmTicket;
         private string _username = "";
         public  bool isConnected  = false;
         public frmMain()
@@ -70,6 +72,7 @@ namespace Hospital_Pilot
                     Login_btn.Enabled = false;
                     Logout_btn.Enabled = true;
                 }
+                Exit_btn.Enabled = false;
             }
         }
 
@@ -81,6 +84,10 @@ namespace Hospital_Pilot
 
         private void Logout_btn_Click(object sender, EventArgs e)
         {
+            progress_logout.Visible = true;
+            var t = Task.Delay(2000);
+            t.Wait();
+            progress_logout.Visible = false;
             _username = "";
             isConnected = false;
             boxTicket.Enabled = false;
@@ -90,11 +97,15 @@ namespace Hospital_Pilot
             Setting_btn.Enabled = false;
             Logout_btn.Enabled = false;
             Login_btn.Enabled = true;
+            Exit_btn.Enabled = true;
+            if (frmTicket != null) frmTicket.Dispose();
+            MessageBox.Show("Đăng xuất thành công!");
+            
         }
 
         private void Ticket_btn_Click(object sender, EventArgs e)
         {
-            frmTicket frmTicket = new frmTicket();
+            frmTicket = new frmTicket();
             frmTicket.MdiParent = this;
             frmTicket.Show();
         }

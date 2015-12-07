@@ -33,6 +33,7 @@
             this.user_txt = new DevExpress.XtraEditors.TextEdit();
             this.pass_txt = new DevExpress.XtraEditors.TextEdit();
             this.groupLogin = new DevExpress.XtraEditors.GroupControl();
+            this.progress_login = new DevExpress.XtraWaitForm.ProgressPanel();
             this.Login_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Exit_btn = new DevExpress.XtraEditors.SimpleButton();
             this.NhomNV = new DevExpress.XtraEditors.RadioGroup();
@@ -83,6 +84,7 @@
             // 
             // groupLogin
             // 
+            this.groupLogin.Controls.Add(this.progress_login);
             this.groupLogin.Controls.Add(this.labelControl1);
             this.groupLogin.Controls.Add(this.pass_txt);
             this.groupLogin.Controls.Add(this.labelControl2);
@@ -92,6 +94,21 @@
             this.groupLogin.Size = new System.Drawing.Size(342, 113);
             this.groupLogin.TabIndex = 4;
             this.groupLogin.Text = "Nhập tài khoản";
+            // 
+            // progress_login
+            // 
+            this.progress_login.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.progress_login.Appearance.Options.UseBackColor = true;
+            this.progress_login.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.progress_login.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.progress_login.Description = "Logging in ...";
+            this.progress_login.Location = new System.Drawing.Point(90, 44);
+            this.progress_login.Name = "progress_login";
+            this.progress_login.Size = new System.Drawing.Size(155, 69);
+            this.progress_login.TabIndex = 4;
+            this.progress_login.Text = "progressPanel1";
+            this.progress_login.Visible = false;
+            this.progress_login.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
             // 
             // Login_btn
             // 
@@ -176,5 +193,6 @@
         private DevExpress.XtraEditors.SimpleButton Login_btn;
         private DevExpress.XtraEditors.SimpleButton Exit_btn;
         private DevExpress.XtraEditors.RadioGroup NhomNV;
+        private DevExpress.XtraWaitForm.ProgressPanel progress_login;
     }
 }

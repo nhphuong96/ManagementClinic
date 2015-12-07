@@ -43,11 +43,16 @@ namespace Hospital_Pilot
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
+            progress_login.Visible = true;
             SqlDatabase db = new SqlDatabase();
             var chucvu = NhomNV.EditValue.ToString();
-            DataTable data = db.GetDataTable("select * from TAIKHOAN inner join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.MANV where TENTK LIKE '" + user_txt.Text + "' AND MATKHAU like '" + pass_txt.Text + "' AND NHOMNV LIKE '" + chucvu + "' AND TRANGTHAI LIKE 'Available'");
+            DataTable data = db.GetDataTable("select * from TAIKHOAN inner join NHANVIEN on TAIKHOAN.MANV = NHANVIEN.MANV where TENTK LIKE '" + user_txt.Text + "' AND MATKHAU like '" + pass_txt.Text + "' AND NHOMNV LIKE '" + chucvu + "' AND TRANGTHAI LIKE 'Available'");            
+            progress_login.Visible = true;
             if (data.Rows.Count > 0)
             {
+                var t = Task.Delay(3000); //1 second/1000 ms
+                t.Wait();
+                progress_login.Visible = false;
                 MessageBox.Show("Đăng nhập thành công");
                 username = user_txt.Text;
                 isConnected = true;
@@ -61,6 +66,8 @@ namespace Hospital_Pilot
         {
             if (user_txt.Text.Length > 0) Login_btn.Enabled = true;
         }
+
+
 
     }
 }

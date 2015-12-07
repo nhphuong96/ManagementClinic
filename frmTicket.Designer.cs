@@ -28,284 +28,334 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTicket));
+            this.tenNguoiBenh_textBox = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.namsinh_textBox = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.dropDownButton2 = new DevExpress.XtraEditors.DropDownButton();
             this.groupBN = new DevExpress.XtraEditors.GroupControl();
-            this.dropDownButton3 = new DevExpress.XtraEditors.DropDownButton();
+            this.thanhpho_combobox = new System.Windows.Forms.ComboBox();
+            this.doituong_comboBox = new System.Windows.Forms.ComboBox();
+            this.gioitinh_ComboBox = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.dropDownButton6 = new DevExpress.XtraEditors.DropDownButton();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.dropDownButton4 = new DevExpress.XtraEditors.DropDownButton();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.dropDownButton5 = new DevExpress.XtraEditors.DropDownButton();
+            this.ThemBenhNhan_btn = new DevExpress.XtraEditors.SimpleButton();
+            this.donvi_combobox = new System.Windows.Forms.ComboBox();
+            this.khoa_combobox = new System.Windows.Forms.ComboBox();
+            this.clearAll_btn = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            this.phong_textBox = new DevExpress.XtraEditors.TextEdit();
+            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            ((System.ComponentModel.ISupportInitialize)(this.tenNguoiBenh_textBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namsinh_textBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBN)).BeginInit();
             this.groupBN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phong_textBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // textEdit1
+            // tenNguoiBenh_textBox
             // 
-            this.textEdit1.Location = new System.Drawing.Point(127, 37);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(135, 20);
-            this.textEdit1.TabIndex = 0;
+            this.tenNguoiBenh_textBox.Location = new System.Drawing.Point(107, 37);
+            this.tenNguoiBenh_textBox.Name = "tenNguoiBenh_textBox";
+            this.tenNguoiBenh_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenNguoiBenh_textBox.Properties.Appearance.Options.UseFont = true;
+            this.tenNguoiBenh_textBox.Size = new System.Drawing.Size(155, 22);
+            this.tenNguoiBenh_textBox.TabIndex = 0;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 40);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(12, 39);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(75, 13);
+            this.labelControl1.Size = new System.Drawing.Size(89, 14);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Tên người bệnh";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(33, 117);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(12, 117);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(43, 13);
+            this.labelControl2.Size = new System.Drawing.Size(49, 14);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Năm sinh";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(33, 80);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(12, 76);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(38, 13);
+            this.labelControl3.Size = new System.Drawing.Size(44, 14);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Giới tính";
             // 
-            // textEdit2
+            // namsinh_textBox
             // 
-            this.textEdit2.Location = new System.Drawing.Point(127, 114);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(67, 20);
-            this.textEdit2.TabIndex = 5;
+            this.namsinh_textBox.Location = new System.Drawing.Point(107, 115);
+            this.namsinh_textBox.Name = "namsinh_textBox";
+            this.namsinh_textBox.Size = new System.Drawing.Size(67, 20);
+            this.namsinh_textBox.TabIndex = 5;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(33, 157);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Location = new System.Drawing.Point(12, 159);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(36, 13);
+            this.labelControl4.Size = new System.Drawing.Size(44, 14);
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "Tỉnh/TP";
             // 
-            // dropDownButton2
-            // 
-            this.dropDownButton2.Location = new System.Drawing.Point(127, 152);
-            this.dropDownButton2.Name = "dropDownButton2";
-            this.dropDownButton2.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton2.TabIndex = 7;
-            this.dropDownButton2.Text = "TP HCM\r\nHà Nội\r\nHải Phòng\r\nĐà Nẵng\r\nCà Mau\r\nTuyên Quang\r\nCần Thơ\r\n";
-            // 
             // groupBN
             // 
-            this.groupBN.Controls.Add(this.comboBox1);
-            this.groupBN.Controls.Add(this.dropDownButton3);
+            this.groupBN.Controls.Add(this.thanhpho_combobox);
+            this.groupBN.Controls.Add(this.doituong_comboBox);
+            this.groupBN.Controls.Add(this.namsinh_textBox);
+            this.groupBN.Controls.Add(this.gioitinh_ComboBox);
             this.groupBN.Controls.Add(this.labelControl5);
-            this.groupBN.Controls.Add(this.textEdit1);
-            this.groupBN.Controls.Add(this.dropDownButton2);
+            this.groupBN.Controls.Add(this.tenNguoiBenh_textBox);
             this.groupBN.Controls.Add(this.labelControl1);
             this.groupBN.Controls.Add(this.labelControl4);
             this.groupBN.Controls.Add(this.labelControl2);
-            this.groupBN.Controls.Add(this.textEdit2);
             this.groupBN.Controls.Add(this.labelControl3);
+            this.groupBN.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBN.Location = new System.Drawing.Point(0, 0);
             this.groupBN.Name = "groupBN";
-            this.groupBN.Size = new System.Drawing.Size(278, 231);
+            this.groupBN.Size = new System.Drawing.Size(278, 555);
             this.groupBN.TabIndex = 8;
             this.groupBN.Text = "Thông tin người bệnh";
             // 
-            // dropDownButton3
+            // thanhpho_combobox
             // 
-            this.dropDownButton3.Location = new System.Drawing.Point(127, 191);
-            this.dropDownButton3.Name = "dropDownButton3";
-            this.dropDownButton3.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton3.TabIndex = 9;
-            this.dropDownButton3.Text = "Thu phí\r\nMiễn phí\r\n\r\n";
+            this.thanhpho_combobox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thanhpho_combobox.FormattingEnabled = true;
+            this.thanhpho_combobox.Items.AddRange(new object[] {
+            "TP. Hồ Chí Minh",
+            "Hà Nội",
+            "Tuyên Quang",
+            "Hải Phòng",
+            "Đà Nẵng",
+            "Cần Thơ",
+            "Quy Nhơn",
+            "Nha Trang"});
+            this.thanhpho_combobox.Location = new System.Drawing.Point(107, 155);
+            this.thanhpho_combobox.Name = "thanhpho_combobox";
+            this.thanhpho_combobox.Size = new System.Drawing.Size(155, 24);
+            this.thanhpho_combobox.TabIndex = 12;
+            // 
+            // doituong_comboBox
+            // 
+            this.doituong_comboBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doituong_comboBox.FormattingEnabled = true;
+            this.doituong_comboBox.Items.AddRange(new object[] {
+            "Thu phí",
+            "Miễn phí",
+            "BHYT"});
+            this.doituong_comboBox.Location = new System.Drawing.Point(107, 197);
+            this.doituong_comboBox.Name = "doituong_comboBox";
+            this.doituong_comboBox.Size = new System.Drawing.Size(155, 24);
+            this.doituong_comboBox.TabIndex = 11;
+            // 
+            // gioitinh_ComboBox
+            // 
+            this.gioitinh_ComboBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gioitinh_ComboBox.FormattingEnabled = true;
+            this.gioitinh_ComboBox.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.gioitinh_ComboBox.Location = new System.Drawing.Point(107, 72);
+            this.gioitinh_ComboBox.Name = "gioitinh_ComboBox";
+            this.gioitinh_ComboBox.Size = new System.Drawing.Size(67, 24);
+            this.gioitinh_ComboBox.TabIndex = 10;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(33, 196);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Location = new System.Drawing.Point(12, 201);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(48, 13);
+            this.labelControl5.Size = new System.Drawing.Size(55, 14);
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "Đối tượng";
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl1.Controls.Add(this.dropDownButton6);
-            this.groupControl1.Controls.Add(this.textEdit5);
-            this.groupControl1.Controls.Add(this.dropDownButton4);
-            this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.dropDownButton5);
+            this.groupControl1.Controls.Add(this.phong_textBox);
+            this.groupControl1.Controls.Add(this.ThemBenhNhan_btn);
+            this.groupControl1.Controls.Add(this.donvi_combobox);
+            this.groupControl1.Controls.Add(this.khoa_combobox);
+            this.groupControl1.Controls.Add(this.clearAll_btn);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Controls.Add(this.textEdit4);
             this.groupControl1.Controls.Add(this.labelControl10);
-            this.groupControl1.Location = new System.Drawing.Point(0, 227);
+            this.groupControl1.Location = new System.Drawing.Point(0, 251);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(278, 240);
+            this.groupControl1.Size = new System.Drawing.Size(278, 311);
             this.groupControl1.TabIndex = 10;
             this.groupControl1.Text = "Thông tin phòng khám";
             // 
-            // dropDownButton6
+            // ThemBenhNhan_btn
             // 
-            this.dropDownButton6.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.SplitButton;
-            this.dropDownButton6.Location = new System.Drawing.Point(127, 35);
-            this.dropDownButton6.Name = "dropDownButton6";
-            this.dropDownButton6.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton6.TabIndex = 11;
-            this.dropDownButton6.Text = "Cấp cứu\r\nChâm cứu\r\nMắt\r\nPhụ sản\r\nTạo hình thẩm mĩ\r\nThần kinh\r\nTay mũi họng\r\n";
+            this.ThemBenhNhan_btn.Location = new System.Drawing.Point(148, 206);
+            this.ThemBenhNhan_btn.Name = "ThemBenhNhan_btn";
+            this.ThemBenhNhan_btn.Size = new System.Drawing.Size(103, 39);
+            this.ThemBenhNhan_btn.TabIndex = 18;
+            this.ThemBenhNhan_btn.Text = "Thêm bệnh nhân";
+            this.ThemBenhNhan_btn.Click += new System.EventHandler(this.ThemBenhNhan_btn_Click);
             // 
-            // textEdit5
+            // donvi_combobox
             // 
-            this.textEdit5.Location = new System.Drawing.Point(127, 77);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(67, 20);
-            this.textEdit5.TabIndex = 10;
+            this.donvi_combobox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donvi_combobox.FormattingEnabled = true;
+            this.donvi_combobox.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.donvi_combobox.Location = new System.Drawing.Point(107, 76);
+            this.donvi_combobox.Name = "donvi_combobox";
+            this.donvi_combobox.Size = new System.Drawing.Size(155, 24);
+            this.donvi_combobox.TabIndex = 16;
+            this.donvi_combobox.SelectedIndexChanged += new System.EventHandler(this.donvi_combobox_SelectedIndexChanged);
             // 
-            // dropDownButton4
+            // khoa_combobox
             // 
-            this.dropDownButton4.Location = new System.Drawing.Point(127, 191);
-            this.dropDownButton4.Name = "dropDownButton4";
-            this.dropDownButton4.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton4.TabIndex = 9;
-            this.dropDownButton4.Text = "Thu phí\r\nMiễn phí\r\n\r\n";
+            this.khoa_combobox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.khoa_combobox.FormattingEnabled = true;
+            this.khoa_combobox.Location = new System.Drawing.Point(107, 36);
+            this.khoa_combobox.Name = "khoa_combobox";
+            this.khoa_combobox.Size = new System.Drawing.Size(155, 24);
+            this.khoa_combobox.TabIndex = 13;
+            this.khoa_combobox.SelectedIndexChanged += new System.EventHandler(this.khoa_combobox_SelectedIndexChanged);
             // 
-            // labelControl6
+            // clearAll_btn
             // 
-            this.labelControl6.Location = new System.Drawing.Point(33, 196);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(48, 13);
-            this.labelControl6.TabIndex = 8;
-            this.labelControl6.Text = "Đối tượng";
-            // 
-            // dropDownButton5
-            // 
-            this.dropDownButton5.Location = new System.Drawing.Point(127, 152);
-            this.dropDownButton5.Name = "dropDownButton5";
-            this.dropDownButton5.Size = new System.Drawing.Size(135, 23);
-            this.dropDownButton5.TabIndex = 7;
-            this.dropDownButton5.Text = "TP HCM\r\nHà Nội\r\nHải Phòng\r\nĐà Nẵng\r\nCà Mau\r\nTuyên Quang\r\nCần Thơ\r\n";
+            this.clearAll_btn.Location = new System.Drawing.Point(26, 206);
+            this.clearAll_btn.Name = "clearAll_btn";
+            this.clearAll_btn.Size = new System.Drawing.Size(100, 39);
+            this.clearAll_btn.TabIndex = 14;
+            this.clearAll_btn.Text = "Xóa hết";
+            this.clearAll_btn.Click += new System.EventHandler(this.clearAll_btn_Click);
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(33, 40);
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Location = new System.Drawing.Point(12, 40);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(44, 13);
+            this.labelControl7.Size = new System.Drawing.Size(52, 14);
             this.labelControl7.TabIndex = 1;
             this.labelControl7.Text = "Tên khoa";
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(33, 157);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(36, 13);
-            this.labelControl8.TabIndex = 6;
-            this.labelControl8.Text = "Tỉnh/TP";
-            // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(33, 117);
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Location = new System.Drawing.Point(12, 121);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(45, 13);
+            this.labelControl9.Size = new System.Drawing.Size(53, 14);
             this.labelControl9.TabIndex = 2;
             this.labelControl9.Text = "Số phòng";
             // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(127, 114);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(67, 20);
-            this.textEdit4.TabIndex = 5;
-            // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(33, 80);
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Location = new System.Drawing.Point(12, 80);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(31, 13);
+            this.labelControl10.Size = new System.Drawing.Size(34, 14);
             this.labelControl10.TabIndex = 4;
             this.labelControl10.Text = "Đơn vị";
             // 
-            // comboBox1
+            // phong_textBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.comboBox1.Location = new System.Drawing.Point(127, 70);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
+            this.phong_textBox.Location = new System.Drawing.Point(107, 119);
+            this.phong_textBox.Name = "phong_textBox";
+            this.phong_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phong_textBox.Properties.Appearance.Options.UseFont = true;
+            this.phong_textBox.Properties.Mask.EditMask = "d";
+            this.phong_textBox.Properties.ReadOnly = true;
+            this.phong_textBox.Size = new System.Drawing.Size(67, 22);
+            this.phong_textBox.TabIndex = 11;
+            // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.printPreviewControl1.Location = new System.Drawing.Point(268, 0);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(568, 555);
+            this.printPreviewControl1.TabIndex = 11;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // frmTicket
             // 
+            this.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 470);
+            this.ClientSize = new System.Drawing.Size(836, 555);
+            this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupBN);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(852, 700);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(852, 528);
             this.Name = "frmTicket";
-            this.Text = "Ticket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "In Phiếu";
             this.Load += new System.EventHandler(this.frmTicket_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenNguoiBenh_textBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namsinh_textBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBN)).EndInit();
             this.groupBN.ResumeLayout(false);
             this.groupBN.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phong_textBox.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit tenNguoiBenh_textBox;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit namsinh_textBox;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton2;
         private DevExpress.XtraEditors.GroupControl groupBN;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton3;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton4;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.DropDownButton dropDownButton5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox gioitinh_ComboBox;
+        private System.Windows.Forms.ComboBox thanhpho_combobox;
+        private System.Windows.Forms.ComboBox doituong_comboBox;
+        private DevExpress.XtraEditors.SimpleButton ThemBenhNhan_btn;
+        private System.Windows.Forms.ComboBox donvi_combobox;
+        private System.Windows.Forms.ComboBox khoa_combobox;
+        private DevExpress.XtraEditors.SimpleButton clearAll_btn;
+        private DevExpress.XtraEditors.TextEdit phong_textBox;
+        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

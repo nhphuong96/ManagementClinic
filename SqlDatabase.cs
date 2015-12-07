@@ -23,26 +23,78 @@ namespace Hospital_Pilot
                 return ConfigurationManager.ConnectionStrings[ConnectionStringName].ConnectionString;
             }
         }
-        public DataTable GetDataTable(string cmdText) {
-            using (var con = new SqlConnection(ConnectionString)) {
+        public DataTable GetDataTable(string cmdText, List<SqlParameter> param = null)
+        {
+            if (param == null)
+            {
+                param = new List<SqlParameter>();
+            }
+            CommandType cmdType = CommandType.Text;
+            if (!cmdText.Contains(' '))
+                cmdType = CommandType.StoredProcedure;
+            var table = new DataTable();
+            using (var con = new SqlConnection(ConnectionString))
+            {
                 con.Open();
-                using (var cmd =  con.CreateCommand()) {
+                using (var cmd = con.CreateCommand())
+                {
+                    //cmd.Connection
                     cmd.CommandText = cmdText;
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = cmdType;
+                    foreach (var item in param)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
                     var reader = cmd.ExecuteReader();
-                    var table = new DataTable();
                     table.Load(reader);
                     reader.Close();
+                }
+                con.Close();
+                con.Dispose();
+            }
+            return table;
+        }
+        public int GetDataScalar(string cmdText) {
+            using (var con = new SqlConnection(ConnectionString))
+            {
+                con.Open();
+                using (var cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = cmdText;
+                    cmd.CommandType = CommandType.Text;
+                    int number = (Int32)cmd.ExecuteScalar();
                     con.Close();
-                    return table;
+                    return number;  
                 }
             }
         }
+        public int ExecuteNonQuery(string cmdText, List<SqlParameter> param = null) {
+            if (param == null) {
+                param = new List<SqlParameter>();
+            }
+            CommandType cmdType = CommandType.Text;
+            if (!cmdText.Contains(' ')) 
+                cmdType = CommandType.StoredProcedure;
+            int result;
+            using (var con = new SqlConnection(ConnectionString)) {
+                using (var cmd = con.CreateCommand()) {
+                    cmd.CommandText = cmdText;
+                    cmd.CommandType = cmdType;
+                    foreach (var item in param) {
+                        cmd.Parameters.Add(item);
+                    }
+                    result = cmd.ExecuteNonQuery();
+                }
+                con.Close();
+                con.Dispose();
+            }
+            return result;
+        }
     }
     public static class DataExtensions {
-        public static List<T> GetList<T>(this SqlDatabase db, string cmdText) where T : new()
+        public static List<T> GetList<T>(this SqlDatabase db, string cmdText, List<SqlParameter> param = null) where T : new()
         {
-            return db.GetDataTable(cmdText).To<T>();
+            return db.GetDataTable(cmdText,param).To<T>();
         }
         public static void SetFromRow(this object item, DataRow row)
         {

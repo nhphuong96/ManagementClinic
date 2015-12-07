@@ -50,6 +50,7 @@
             this.boxTicket = new System.Windows.Forms.GroupBox();
             this.Ticket_btn = new DevExpress.XtraEditors.SimpleButton();
             this.mdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.progress_logout = new DevExpress.XtraWaitForm.ProgressPanel();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.boxKhamBenh.SuspendLayout();
@@ -267,13 +268,28 @@
             // 
             this.mdiManager.MdiParent = this;
             // 
+            // progress_logout
+            // 
+            this.progress_logout.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.progress_logout.Appearance.Options.UseBackColor = true;
+            this.progress_logout.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.progress_logout.Description = "Logging out ...";
+            this.progress_logout.Location = new System.Drawing.Point(350, 212);
+            this.progress_logout.Name = "progress_logout";
+            this.progress_logout.Size = new System.Drawing.Size(246, 66);
+            this.progress_logout.TabIndex = 2;
+            this.progress_logout.Text = "progressPanel1";
+            this.progress_logout.Visible = false;
+            this.progress_logout.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
+            // 
             // frmMain
             // 
-            this.Appearance.BackColor = System.Drawing.Color.Lavender;
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.progress_logout);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
@@ -320,6 +336,7 @@
         private DevExpress.XtraEditors.SimpleButton Exit_btn;
         private DevExpress.XtraEditors.SimpleButton Logout_btn;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdiManager;
+        private DevExpress.XtraWaitForm.ProgressPanel progress_logout;
 
 
 
