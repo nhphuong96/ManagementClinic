@@ -115,8 +115,9 @@ namespace Hospital_Pilot
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             frmKhamBenh = new frmKhamBenh();
-            frmKhamBenh.MdiParent = this;
-            frmKhamBenh.Show();
+            frmKhamBenh.TopLevel = true;
+            frmKhamBenh.ShowInTaskbar = false;
+            frmKhamBenh.ShowDialog();
         }
     }
 }

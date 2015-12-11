@@ -33,7 +33,7 @@
             this.Group_bacsi = new DevExpress.XtraEditors.GroupControl();
             this.mabs_combobox = new System.Windows.Forms.ComboBox();
             this.donvi_txt = new DevExpress.XtraEditors.TextEdit();
-            this.khoa_txt = new DevExpress.XtraEditors.TextEdit();
+            this.hocvi_txt = new DevExpress.XtraEditors.TextEdit();
             this.gioitinh_txt = new DevExpress.XtraEditors.TextEdit();
             this.tenbs_txt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -51,33 +51,34 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.searchDoctor_btn = new DevExpress.XtraEditors.SimpleButton();
             this.group_benhan = new DevExpress.XtraEditors.GroupControl();
+            this.thuoc_txt = new System.Windows.Forms.TextBox();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.cachsudung_txt = new DevExpress.XtraEditors.TextEdit();
+            this.soluong_txt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.chandoan_txt = new DevExpress.XtraEditors.TextEdit();
+            this.donvitinh_combobox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.loidan_txt = new System.Windows.Forms.RichTextBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.thuoc_txt = new System.Windows.Forms.TextBox();
-            this.STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
             this.TENTHUOC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SOLUONG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.donvitinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HDSD1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DONVITINH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CACHSUDUNG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ThuocprintDocument = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.groupBN)).BeginInit();
             this.groupBN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Group_bacsi)).BeginInit();
             this.Group_bacsi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donvi_txt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khoa_txt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocvi_txt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gioitinh_txt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenbs_txt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gioitinhBN_txt.Properties)).BeginInit();
@@ -86,10 +87,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tenNguoiBenh_textBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.group_benhan)).BeginInit();
             this.group_benhan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cachsudung_txt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soluong_txt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chandoan_txt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donvitinh_combobox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBN
@@ -125,7 +126,7 @@
             // 
             this.Group_bacsi.Controls.Add(this.mabs_combobox);
             this.Group_bacsi.Controls.Add(this.donvi_txt);
-            this.Group_bacsi.Controls.Add(this.khoa_txt);
+            this.Group_bacsi.Controls.Add(this.hocvi_txt);
             this.Group_bacsi.Controls.Add(this.gioitinh_txt);
             this.Group_bacsi.Controls.Add(this.tenbs_txt);
             this.Group_bacsi.Controls.Add(this.labelControl13);
@@ -158,14 +159,14 @@
             this.donvi_txt.Size = new System.Drawing.Size(155, 22);
             this.donvi_txt.TabIndex = 26;
             // 
-            // khoa_txt
+            // hocvi_txt
             // 
-            this.khoa_txt.Location = new System.Drawing.Point(107, 155);
-            this.khoa_txt.Name = "khoa_txt";
-            this.khoa_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.khoa_txt.Properties.Appearance.Options.UseFont = true;
-            this.khoa_txt.Size = new System.Drawing.Size(155, 22);
-            this.khoa_txt.TabIndex = 25;
+            this.hocvi_txt.Location = new System.Drawing.Point(107, 155);
+            this.hocvi_txt.Name = "hocvi_txt";
+            this.hocvi_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hocvi_txt.Properties.Appearance.Options.UseFont = true;
+            this.hocvi_txt.Size = new System.Drawing.Size(155, 22);
+            this.hocvi_txt.TabIndex = 25;
             // 
             // gioitinh_txt
             // 
@@ -199,9 +200,9 @@
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Location = new System.Drawing.Point(12, 159);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(27, 14);
+            this.labelControl12.Size = new System.Drawing.Size(33, 14);
             this.labelControl12.TabIndex = 21;
-            this.labelControl12.Text = "Khoa";
+            this.labelControl12.Text = "Học vị";
             // 
             // labelControl11
             // 
@@ -236,6 +237,7 @@
             this.gioitinhBN_txt.Name = "gioitinhBN_txt";
             this.gioitinhBN_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gioitinhBN_txt.Properties.Appearance.Options.UseFont = true;
+            this.gioitinhBN_txt.Properties.ReadOnly = true;
             this.gioitinhBN_txt.Size = new System.Drawing.Size(67, 22);
             this.gioitinhBN_txt.TabIndex = 16;
             // 
@@ -245,6 +247,7 @@
             this.diachi_txt.Name = "diachi_txt";
             this.diachi_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diachi_txt.Properties.Appearance.Options.UseFont = true;
+            this.diachi_txt.Properties.ReadOnly = true;
             this.diachi_txt.Size = new System.Drawing.Size(155, 22);
             this.diachi_txt.TabIndex = 15;
             // 
@@ -263,6 +266,7 @@
             this.namsinh_textBox.Name = "namsinh_textBox";
             this.namsinh_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namsinh_textBox.Properties.Appearance.Options.UseFont = true;
+            this.namsinh_textBox.Properties.ReadOnly = true;
             this.namsinh_textBox.Size = new System.Drawing.Size(67, 22);
             this.namsinh_textBox.TabIndex = 5;
             // 
@@ -272,6 +276,7 @@
             this.tenNguoiBenh_textBox.Name = "tenNguoiBenh_textBox";
             this.tenNguoiBenh_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenNguoiBenh_textBox.Properties.Appearance.Options.UseFont = true;
+            this.tenNguoiBenh_textBox.Properties.ReadOnly = true;
             this.tenNguoiBenh_textBox.Size = new System.Drawing.Size(155, 22);
             this.tenNguoiBenh_textBox.TabIndex = 0;
             // 
@@ -317,12 +322,12 @@
             this.group_benhan.Controls.Add(this.simpleButton2);
             this.group_benhan.Controls.Add(this.simpleButton1);
             this.group_benhan.Controls.Add(this.labelControl6);
-            this.group_benhan.Controls.Add(this.textEdit5);
-            this.group_benhan.Controls.Add(this.textEdit4);
+            this.group_benhan.Controls.Add(this.cachsudung_txt);
+            this.group_benhan.Controls.Add(this.soluong_txt);
             this.group_benhan.Controls.Add(this.labelControl5);
             this.group_benhan.Controls.Add(this.labelControl4);
-            this.group_benhan.Controls.Add(this.textEdit2);
-            this.group_benhan.Controls.Add(this.comboBoxEdit1);
+            this.group_benhan.Controls.Add(this.chandoan_txt);
+            this.group_benhan.Controls.Add(this.donvitinh_combobox);
             this.group_benhan.Dock = System.Windows.Forms.DockStyle.Top;
             this.group_benhan.Enabled = false;
             this.group_benhan.Location = new System.Drawing.Point(278, 0);
@@ -331,6 +336,16 @@
             this.group_benhan.TabIndex = 12;
             this.group_benhan.Text = "Thông tin bệnh án";
             // 
+            // thuoc_txt
+            // 
+            this.thuoc_txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.thuoc_txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.thuoc_txt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thuoc_txt.Location = new System.Drawing.Point(105, 71);
+            this.thuoc_txt.Name = "thuoc_txt";
+            this.thuoc_txt.Size = new System.Drawing.Size(149, 23);
+            this.thuoc_txt.TabIndex = 25;
+            // 
             // simpleButton2
             // 
             this.simpleButton2.Location = new System.Drawing.Point(498, 89);
@@ -338,6 +353,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(85, 34);
             this.simpleButton2.TabIndex = 24;
             this.simpleButton2.Text = "Xóa thuốc";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -346,6 +362,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(85, 34);
             this.simpleButton1.TabIndex = 23;
             this.simpleButton1.Text = "Thêm thuốc";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl6
             // 
@@ -356,23 +373,23 @@
             this.labelControl6.TabIndex = 22;
             this.labelControl6.Text = "Cách sử dụng";
             // 
-            // textEdit5
+            // cachsudung_txt
             // 
-            this.textEdit5.Location = new System.Drawing.Point(105, 109);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(258, 22);
-            this.textEdit5.TabIndex = 21;
+            this.cachsudung_txt.Location = new System.Drawing.Point(105, 109);
+            this.cachsudung_txt.Name = "cachsudung_txt";
+            this.cachsudung_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cachsudung_txt.Properties.Appearance.Options.UseFont = true;
+            this.cachsudung_txt.Size = new System.Drawing.Size(258, 22);
+            this.cachsudung_txt.TabIndex = 21;
             // 
-            // textEdit4
+            // soluong_txt
             // 
-            this.textEdit4.Location = new System.Drawing.Point(260, 72);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(44, 22);
-            this.textEdit4.TabIndex = 19;
+            this.soluong_txt.Location = new System.Drawing.Point(260, 72);
+            this.soluong_txt.Name = "soluong_txt";
+            this.soluong_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soluong_txt.Properties.Appearance.Options.UseFont = true;
+            this.soluong_txt.Size = new System.Drawing.Size(44, 22);
+            this.soluong_txt.TabIndex = 19;
             // 
             // labelControl5
             // 
@@ -392,46 +409,30 @@
             this.labelControl4.TabIndex = 17;
             this.labelControl4.Text = "Chẩn đoán";
             // 
-            // textEdit2
+            // chandoan_txt
             // 
-            this.textEdit2.Location = new System.Drawing.Point(105, 34);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(478, 22);
-            this.textEdit2.TabIndex = 17;
+            this.chandoan_txt.Location = new System.Drawing.Point(105, 34);
+            this.chandoan_txt.Name = "chandoan_txt";
+            this.chandoan_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chandoan_txt.Properties.Appearance.Options.UseFont = true;
+            this.chandoan_txt.Size = new System.Drawing.Size(478, 22);
+            this.chandoan_txt.TabIndex = 17;
             // 
-            // comboBoxEdit1
+            // donvitinh_combobox
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(301, 72);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.donvitinh_combobox.Location = new System.Drawing.Point(301, 72);
+            this.donvitinh_combobox.Name = "donvitinh_combobox";
+            this.donvitinh_combobox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donvitinh_combobox.Properties.Appearance.Options.UseFont = true;
+            this.donvitinh_combobox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.donvitinh_combobox.Properties.Items.AddRange(new object[] {
             "tub",
             "viên",
             "lọ"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(62, 22);
-            this.comboBoxEdit1.TabIndex = 20;
-            this.comboBoxEdit1.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.STT,
-            this.TENTHUOC,
-            this.SOLUONG,
-            this.donvitinh,
-            this.HDSD1});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listView1.Location = new System.Drawing.Point(278, 160);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(609, 211);
-            this.listView1.TabIndex = 13;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.donvitinh_combobox.Size = new System.Drawing.Size(62, 22);
+            this.donvitinh_combobox.TabIndex = 20;
+            this.donvitinh_combobox.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
             // 
             // labelControl7
             // 
@@ -475,21 +476,23 @@
             this.simpleButton3.Size = new System.Drawing.Size(113, 34);
             this.simpleButton3.TabIndex = 25;
             this.simpleButton3.Text = "In Toa Thuốc";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // thuoc_txt
+            // listView1
             // 
-            this.thuoc_txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.thuoc_txt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.thuoc_txt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thuoc_txt.Location = new System.Drawing.Point(105, 71);
-            this.thuoc_txt.Name = "thuoc_txt";
-            this.thuoc_txt.Size = new System.Drawing.Size(149, 23);
-            this.thuoc_txt.TabIndex = 25;
-            // 
-            // STT
-            // 
-            this.STT.Text = "Số TT";
-            this.STT.Width = 45;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.TENTHUOC,
+            this.SOLUONG,
+            this.DONVITINH,
+            this.CACHSUDUNG});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(278, 160);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(609, 223);
+            this.listView1.TabIndex = 30;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // TENTHUOC
             // 
@@ -498,29 +501,32 @@
             // 
             // SOLUONG
             // 
-            this.SOLUONG.Text = "S.Lượng";
+            this.SOLUONG.Text = "Số lượng";
             // 
-            // donvitinh
+            // DONVITINH
             // 
-            this.donvitinh.Text = "Đơn vị tính";
-            this.donvitinh.Width = 80;
+            this.DONVITINH.Text = "Đơn vị tính";
             // 
-            // HDSD1
+            // CACHSUDUNG
             // 
-            this.HDSD1.Text = "Hướng dẫn sử dụng";
-            this.HDSD1.Width = 200;
+            this.CACHSUDUNG.Text = "Cách sử dụng";
+            this.CACHSUDUNG.Width = 210;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // frmKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 530);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.loidan_txt);
             this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.group_benhan);
             this.Controls.Add(this.searchDoctor_btn);
             this.Controls.Add(this.groupBN);
@@ -534,7 +540,7 @@
             this.Group_bacsi.ResumeLayout(false);
             this.Group_bacsi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donvi_txt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khoa_txt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hocvi_txt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gioitinh_txt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenbs_txt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gioitinhBN_txt.Properties)).EndInit();
@@ -544,10 +550,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.group_benhan)).EndInit();
             this.group_benhan.ResumeLayout(false);
             this.group_benhan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cachsudung_txt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soluong_txt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chandoan_txt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donvitinh_combobox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,13 +571,12 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.GroupControl group_benhan;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit soluong_txt;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private System.Windows.Forms.ListView listView1;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit chandoan_txt;
+        private DevExpress.XtraEditors.ComboBoxEdit donvitinh_combobox;
+        private DevExpress.XtraEditors.TextEdit cachsudung_txt;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -583,7 +588,7 @@
         private DevExpress.XtraEditors.GroupControl Group_bacsi;
         private DevExpress.XtraEditors.SimpleButton searchDoctor_btn;
         private DevExpress.XtraEditors.TextEdit donvi_txt;
-        private DevExpress.XtraEditors.TextEdit khoa_txt;
+        private DevExpress.XtraEditors.TextEdit hocvi_txt;
         private DevExpress.XtraEditors.TextEdit gioitinh_txt;
         private DevExpress.XtraEditors.TextEdit tenbs_txt;
         private DevExpress.XtraEditors.LabelControl labelControl13;
@@ -594,11 +599,13 @@
         private System.Windows.Forms.ComboBox mabs_combobox;
         private DevExpress.XtraEditors.SimpleButton timkiemnguoibenh_btn;
         private System.Windows.Forms.TextBox thuoc_txt;
-        private System.Windows.Forms.ColumnHeader STT;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader TENTHUOC;
         private System.Windows.Forms.ColumnHeader SOLUONG;
-        private System.Windows.Forms.ColumnHeader donvitinh;
-        private System.Windows.Forms.ColumnHeader HDSD1;
+        private System.Windows.Forms.ColumnHeader DONVITINH;
+        private System.Windows.Forms.ColumnHeader CACHSUDUNG;
+        private System.Drawing.Printing.PrintDocument ThuocprintDocument;
+        private System.Windows.Forms.PrintDialog printDialog1;
 
     }
 }

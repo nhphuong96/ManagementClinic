@@ -60,7 +60,7 @@
             this.simpleButton1.Text = "Tìm kiếm";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // TimKiemNguoiBenh
+            // frmTimKiemNguoiBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,8 @@
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.manguoibenh_txt);
             this.Controls.Add(this.labelControl1);
-            this.Name = "TimKiemNguoiBenh";
+            this.Name = "frmTimKiemNguoiBenh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tìm kiếm người bệnh";
             ((System.ComponentModel.ISupportInitialize)(this.manguoibenh_txt.Properties)).EndInit();
             this.ResumeLayout(false);
