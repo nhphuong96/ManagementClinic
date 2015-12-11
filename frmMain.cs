@@ -17,7 +17,8 @@ namespace Hospital_Pilot
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         frmTicket frmTicket;
-        private string _username = "";
+        frmKhamBenh frmKhamBenh;
+        public string _username = "";
         public  bool isConnected  = false;
         public frmMain()
         {
@@ -107,7 +108,15 @@ namespace Hospital_Pilot
         {
             frmTicket = new frmTicket();
             frmTicket.MdiParent = this;
+            frmTicket._username = this._username;
             frmTicket.Show();
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            frmKhamBenh = new frmKhamBenh();
+            frmKhamBenh.MdiParent = this;
+            frmKhamBenh.Show();
         }
     }
 }

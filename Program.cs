@@ -22,7 +22,7 @@ namespace Hospital_Pilot
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new frmMain());
+            Application.Run(new frmKhamBenh());
         }
     }
 }

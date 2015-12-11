@@ -77,6 +77,7 @@ namespace Hospital_Pilot
                 cmdType = CommandType.StoredProcedure;
             int result;
             using (var con = new SqlConnection(ConnectionString)) {
+                con.Open();
                 using (var cmd = con.CreateCommand()) {
                     cmd.CommandText = cmdText;
                     cmd.CommandType = cmdType;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTicket));
             this.tenNguoiBenh_textBox = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -36,11 +35,15 @@
             this.namsinh_textBox = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.groupBN = new DevExpress.XtraEditors.GroupControl();
+            this.diachi_txt = new DevExpress.XtraEditors.TextEdit();
+            this.diachi_label = new DevExpress.XtraEditors.LabelControl();
             this.thanhpho_combobox = new System.Windows.Forms.ComboBox();
             this.doituong_comboBox = new System.Windows.Forms.ComboBox();
             this.gioitinh_ComboBox = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.xemtruocphieu_btn = new DevExpress.XtraEditors.SimpleButton();
+            this.phong_textBox = new DevExpress.XtraEditors.TextEdit();
             this.ThemBenhNhan_btn = new DevExpress.XtraEditors.SimpleButton();
             this.donvi_combobox = new System.Windows.Forms.ComboBox();
             this.khoa_combobox = new System.Windows.Forms.ComboBox();
@@ -48,14 +51,12 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.phong_textBox = new DevExpress.XtraEditors.TextEdit();
-            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.tenNguoiBenh_textBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.namsinh_textBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBN)).BeginInit();
             this.groupBN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diachi_txt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phong_textBox.Properties)).BeginInit();
@@ -101,7 +102,9 @@
             // 
             this.namsinh_textBox.Location = new System.Drawing.Point(107, 115);
             this.namsinh_textBox.Name = "namsinh_textBox";
-            this.namsinh_textBox.Size = new System.Drawing.Size(67, 20);
+            this.namsinh_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namsinh_textBox.Properties.Appearance.Options.UseFont = true;
+            this.namsinh_textBox.Size = new System.Drawing.Size(67, 22);
             this.namsinh_textBox.TabIndex = 5;
             // 
             // labelControl4
@@ -115,6 +118,8 @@
             // 
             // groupBN
             // 
+            this.groupBN.Controls.Add(this.diachi_txt);
+            this.groupBN.Controls.Add(this.diachi_label);
             this.groupBN.Controls.Add(this.thanhpho_combobox);
             this.groupBN.Controls.Add(this.doituong_comboBox);
             this.groupBN.Controls.Add(this.namsinh_textBox);
@@ -131,6 +136,24 @@
             this.groupBN.Size = new System.Drawing.Size(278, 555);
             this.groupBN.TabIndex = 8;
             this.groupBN.Text = "Thông tin người bệnh";
+            // 
+            // diachi_txt
+            // 
+            this.diachi_txt.Location = new System.Drawing.Point(107, 234);
+            this.diachi_txt.Name = "diachi_txt";
+            this.diachi_txt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diachi_txt.Properties.Appearance.Options.UseFont = true;
+            this.diachi_txt.Size = new System.Drawing.Size(155, 22);
+            this.diachi_txt.TabIndex = 15;
+            // 
+            // diachi_label
+            // 
+            this.diachi_label.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diachi_label.Location = new System.Drawing.Point(12, 238);
+            this.diachi_label.Name = "diachi_label";
+            this.diachi_label.Size = new System.Drawing.Size(35, 14);
+            this.diachi_label.TabIndex = 14;
+            this.diachi_label.Text = "Địa chỉ";
             // 
             // thanhpho_combobox
             // 
@@ -188,6 +211,7 @@
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.groupControl1.Controls.Add(this.xemtruocphieu_btn);
             this.groupControl1.Controls.Add(this.phong_textBox);
             this.groupControl1.Controls.Add(this.ThemBenhNhan_btn);
             this.groupControl1.Controls.Add(this.donvi_combobox);
@@ -196,15 +220,36 @@
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl9);
             this.groupControl1.Controls.Add(this.labelControl10);
-            this.groupControl1.Location = new System.Drawing.Point(0, 251);
+            this.groupControl1.Location = new System.Drawing.Point(0, 294);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(278, 311);
+            this.groupControl1.Size = new System.Drawing.Size(278, 268);
             this.groupControl1.TabIndex = 10;
             this.groupControl1.Text = "Thông tin phòng khám";
             // 
+            // xemtruocphieu_btn
+            // 
+            this.xemtruocphieu_btn.Enabled = false;
+            this.xemtruocphieu_btn.Location = new System.Drawing.Point(26, 210);
+            this.xemtruocphieu_btn.Name = "xemtruocphieu_btn";
+            this.xemtruocphieu_btn.Size = new System.Drawing.Size(222, 39);
+            this.xemtruocphieu_btn.TabIndex = 19;
+            this.xemtruocphieu_btn.Text = "In phiếu";
+            this.xemtruocphieu_btn.Click += new System.EventHandler(this.xemtruocphieu_btn_Click);
+            // 
+            // phong_textBox
+            // 
+            this.phong_textBox.Location = new System.Drawing.Point(107, 119);
+            this.phong_textBox.Name = "phong_textBox";
+            this.phong_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phong_textBox.Properties.Appearance.Options.UseFont = true;
+            this.phong_textBox.Properties.Mask.EditMask = "d";
+            this.phong_textBox.Properties.ReadOnly = true;
+            this.phong_textBox.Size = new System.Drawing.Size(67, 22);
+            this.phong_textBox.TabIndex = 11;
+            // 
             // ThemBenhNhan_btn
             // 
-            this.ThemBenhNhan_btn.Location = new System.Drawing.Point(148, 206);
+            this.ThemBenhNhan_btn.Location = new System.Drawing.Point(145, 162);
             this.ThemBenhNhan_btn.Name = "ThemBenhNhan_btn";
             this.ThemBenhNhan_btn.Size = new System.Drawing.Size(103, 39);
             this.ThemBenhNhan_btn.TabIndex = 18;
@@ -236,7 +281,7 @@
             // 
             // clearAll_btn
             // 
-            this.clearAll_btn.Location = new System.Drawing.Point(26, 206);
+            this.clearAll_btn.Location = new System.Drawing.Point(26, 162);
             this.clearAll_btn.Name = "clearAll_btn";
             this.clearAll_btn.Size = new System.Drawing.Size(100, 39);
             this.clearAll_btn.TabIndex = 14;
@@ -270,37 +315,6 @@
             this.labelControl10.TabIndex = 4;
             this.labelControl10.Text = "Đơn vị";
             // 
-            // phong_textBox
-            // 
-            this.phong_textBox.Location = new System.Drawing.Point(107, 119);
-            this.phong_textBox.Name = "phong_textBox";
-            this.phong_textBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phong_textBox.Properties.Appearance.Options.UseFont = true;
-            this.phong_textBox.Properties.Mask.EditMask = "d";
-            this.phong_textBox.Properties.ReadOnly = true;
-            this.phong_textBox.Size = new System.Drawing.Size(67, 22);
-            this.phong_textBox.TabIndex = 11;
-            // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printPreviewControl1.Location = new System.Drawing.Point(268, 0);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(568, 555);
-            this.printPreviewControl1.TabIndex = 11;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
-            // 
             // frmTicket
             // 
             this.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -308,7 +322,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 555);
-            this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupBN);
             this.MaximizeBox = false;
@@ -324,6 +337,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupBN)).EndInit();
             this.groupBN.ResumeLayout(false);
             this.groupBN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diachi_txt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -354,8 +368,9 @@
         private System.Windows.Forms.ComboBox khoa_combobox;
         private DevExpress.XtraEditors.SimpleButton clearAll_btn;
         private DevExpress.XtraEditors.TextEdit phong_textBox;
-        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private DevExpress.XtraEditors.SimpleButton xemtruocphieu_btn;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private DevExpress.XtraEditors.TextEdit diachi_txt;
+        private DevExpress.XtraEditors.LabelControl diachi_label;
     }
 }

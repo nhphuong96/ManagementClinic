@@ -9,7 +9,9 @@ namespace Hospital_Pilot
     class Khoa
     {
         public int _maSoKhamBenh = 1;
-
+        public Khoa() {
+            _maSoKhamBenh++;
+        }
         public string maKhoa { get; set; }
         public string tenKhoa { get; set; }
         public string truongKhoa { get; set; }

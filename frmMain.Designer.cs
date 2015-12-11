@@ -165,6 +165,7 @@
             this.simpleButton4.Size = new System.Drawing.Size(84, 58);
             this.simpleButton4.TabIndex = 1;
             this.simpleButton4.Text = "Khám bệnh";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // boxThuoc
             // 

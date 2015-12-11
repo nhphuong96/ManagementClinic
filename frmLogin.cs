@@ -50,7 +50,7 @@ namespace Hospital_Pilot
             progress_login.Visible = true;
             if (data.Rows.Count > 0)
             {
-                var t = Task.Delay(3000); //1 second/1000 ms
+                var t = Task.Delay(1000); //1 second/1000 ms
                 t.Wait();
                 progress_login.Visible = false;
                 MessageBox.Show("Đăng nhập thành công");
