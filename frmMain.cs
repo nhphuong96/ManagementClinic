@@ -18,6 +18,7 @@ namespace Hospital_Pilot
     {
         frmTicket frmTicket;
         frmKhamBenh frmKhamBenh;
+        frmKhoThuoc frmKhoThuoc;
         public string _username = "";
         public  bool isConnected  = false;
         public frmMain()
@@ -118,6 +119,14 @@ namespace Hospital_Pilot
             frmKhamBenh.TopLevel = true;
             frmKhamBenh.ShowInTaskbar = false;
             frmKhamBenh.ShowDialog();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            frmKhoThuoc = new frmKhoThuoc();
+            frmKhoThuoc.TopLevel = true;
+            frmKhoThuoc.ShowInTaskbar = false;
+            frmKhoThuoc.ShowDialog();
         }
     }
 }

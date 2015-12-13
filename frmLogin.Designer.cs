@@ -153,6 +153,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.Login_btn;
             this.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

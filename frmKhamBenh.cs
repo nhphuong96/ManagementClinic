@@ -13,8 +13,10 @@ namespace Hospital_Pilot
     public partial class frmKhamBenh : DevExpress.XtraEditors.XtraForm
     {
         frmTimKiemBacSi frmtimkiem;
-        frmTimKiemNguoiBenh frmNguoiBenh;
+        frmTimKiemNguoiBenh frmNguoiBenh = new frmTimKiemNguoiBenh();
         SqlDatabase db = new SqlDatabase();
+        BenhNhan tmpNguoiBenh;
+
         public frmKhamBenh()
         {
             InitializeComponent();
@@ -51,7 +53,6 @@ namespace Hospital_Pilot
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            frmNguoiBenh = new frmTimKiemNguoiBenh();
             frmNguoiBenh.TopLevel = true;
             frmNguoiBenh.ShowInTaskbar = false;
             frmNguoiBenh.ShowDialog();
@@ -101,6 +102,7 @@ namespace Hospital_Pilot
             {
                 ThuocprintDocument.Print();
             }
+            DataAccess.UpdateGeneric(new { MABN = frmNguoiBenh.manguoibenh }, "CHANDOAN");
             tenNguoiBenh_textBox.Text = "";
             gioitinhBN_txt.Text = "";
             namsinh_textBox.Text = "";

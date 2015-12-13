@@ -201,6 +201,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(59, 58);
             this.simpleButton3.TabIndex = 1;
             this.simpleButton3.Text = "Kho";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // boxNhanVien
             // 

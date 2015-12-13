@@ -45,11 +45,14 @@ namespace Hospital_Pilot
             var idColumn = obj.GetType().GetProperties().FirstOrDefault().Name;
             return string.Format("delete from {0} where {1}=@{1} ", tableName, idColumn);
         }
-        public static List<SqlParameter> ToSqlParameter(this object obj) {
+        public static List<SqlParameter> ToSqlParameter(this object obj)
+        {
             var props = obj.GetType().GetProperties();
             var param = new List<SqlParameter>();
-            foreach (var item in props) {
-                param.Add(new SqlParameter{
+            foreach (var item in props)
+            {
+                param.Add(new SqlParameter
+                {
                     ParameterName = item.Name,
                     Value = item.GetValue(obj) ?? DBNull.Value
                 });

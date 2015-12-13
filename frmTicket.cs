@@ -95,7 +95,9 @@ namespace Hospital_Pilot
                 graphic.DrawString("Phòng khám: Phòng "+ data.ToString(), new Font("Times New Roman", 18), new SolidBrush(Color.Black),startX, startY + offset);
                 offset += (int)fontHeight + 10;
                 graphic.DrawString("Số thứ tự khám " + donvi_combobox.SelectedValue.ToString(), new Font("Times New Roman", 18), new SolidBrush(Color.Black), startX, startY + offset);
-                offset += (int)fontHeight + 50;
+                offset += (int)fontHeight + 10;
+                graphic.DrawString(BenhNhan._mabn.ToString(), new Font("Times New Roman", 28), new SolidBrush(Color.Black), startX+80, startY + offset);
+                offset += (int)fontHeight + 40;
                 graphic.DrawString("Họ tên: " + tenNguoiBenh_textBox.Text, new Font("Times New Roman", 14), new SolidBrush(Color.Black), startX, startY + offset);
                 offset += (int)fontHeight + 10;
                 graphic.DrawString("Giới tính: " + gioitinh_ComboBox.Text.PadRight(10) + "Năm sinh: " + namsinh_textBox.Text, new Font("Times New Roman", 14), new SolidBrush(Color.Black), startX, startY + offset);
