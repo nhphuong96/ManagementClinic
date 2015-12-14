@@ -40,6 +40,7 @@
             this.TENTHUOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DONVITINH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DONGIA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
@@ -61,7 +62,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(73, 291);
+            this.simpleButton2.Location = new System.Drawing.Point(73, 341);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(109, 35);
             this.simpleButton2.TabIndex = 5;
@@ -80,7 +81,7 @@
             // 
             // Xoa_btn
             // 
-            this.Xoa_btn.Location = new System.Drawing.Point(73, 187);
+            this.Xoa_btn.Location = new System.Drawing.Point(73, 214);
             this.Xoa_btn.Name = "Xoa_btn";
             this.Xoa_btn.Size = new System.Drawing.Size(109, 35);
             this.Xoa_btn.TabIndex = 2;
@@ -90,6 +91,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.bindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(252, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -108,8 +110,6 @@
             this.DONGIA});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // MATHUOC
             // 
@@ -143,6 +143,10 @@
             this.DONGIA.Name = "DONGIA";
             this.DONGIA.Visible = true;
             this.DONGIA.VisibleIndex = 3;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // frmKhoThuoc
             // 
@@ -179,6 +183,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn TENTHUOC;
         private DevExpress.XtraGrid.Columns.GridColumn DONVITINH;
         private DevExpress.XtraGrid.Columns.GridColumn DONGIA;
+        private System.Windows.Forms.PrintDialog printDialog1;
 
     }
 }

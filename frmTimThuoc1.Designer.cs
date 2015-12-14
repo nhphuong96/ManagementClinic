@@ -218,11 +218,11 @@
             // 
             // timkiem_btn
             // 
-            this.timkiem_btn.Location = new System.Drawing.Point(45, 337);
+            this.timkiem_btn.Location = new System.Drawing.Point(112, 337);
             this.timkiem_btn.Name = "timkiem_btn";
-            this.timkiem_btn.Size = new System.Drawing.Size(60, 52);
+            this.timkiem_btn.Size = new System.Drawing.Size(102, 52);
             this.timkiem_btn.TabIndex = 11;
-            this.timkiem_btn.Text = "Cập nhật";
+            this.timkiem_btn.Text = "Tìm kiếm";
             this.timkiem_btn.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton1
@@ -247,11 +247,12 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(111, 337);
+            this.simpleButton2.Location = new System.Drawing.Point(45, 337);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(103, 52);
+            this.simpleButton2.Size = new System.Drawing.Size(61, 52);
             this.simpleButton2.TabIndex = 14;
-            this.simpleButton2.Text = "Tìm kiếm";
+            this.simpleButton2.Text = "Cập nhật";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frmTimThuoc1
             // 

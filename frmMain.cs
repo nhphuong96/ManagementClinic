@@ -128,5 +128,10 @@ namespace Hospital_Pilot
             frmKhoThuoc.ShowInTaskbar = false;
             frmKhoThuoc.ShowDialog();
         }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,6 @@ namespace Hospital_Pilot
         public static int _mabn = 0;
         public BenhNhan() {
             MaBN++;
-            Chandoan = "";
         }
         public int MaBN { get { return _mabn; } set { _mabn = value; } }
         public string Hoten { get; set; }
@@ -19,6 +18,5 @@ namespace Hospital_Pilot
         public int Namsinh { get; set; }
         public string Diachi {get; set;}
         public string Donvi { get; set; }
-        public string Chandoan { get; set; }
     }
 }

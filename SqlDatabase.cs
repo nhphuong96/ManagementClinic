@@ -8,12 +8,13 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital_Pilot
+namespace DatabaseLib
 {
     public class SqlDatabase
     {
         public string ConnectionStringName { get; set; }
-        public SqlDatabase(string conString = "data") {
+        public SqlDatabase(string conString = "data")
+        {
             ConnectionStringName = conString;
         }
         public string ConnectionString
@@ -54,34 +55,56 @@ namespace Hospital_Pilot
             }
             return table;
         }
-        public int GetDataScalar(string cmdText) {
+        public int GetDataScalar(string cmdText, List<SqlParameter> param = null) {
+            if (param == null)
+            {
+                param = new List<SqlParameter>();
+            }
+            CommandType cmdType = CommandType.Text;
+            if (!cmdText.Contains(' '))
+                cmdType = CommandType.StoredProcedure;
+            int result = 0;
             using (var con = new SqlConnection(ConnectionString))
             {
                 con.Open();
                 using (var cmd = con.CreateCommand())
                 {
+                    //cmd.Connection
                     cmd.CommandText = cmdText;
-                    cmd.CommandType = CommandType.Text;
-                    int number = (Int32)cmd.ExecuteScalar();
-                    con.Close();
-                    return number;  
+                    cmd.CommandType = cmdType;
+                    foreach (var item in param)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
+                    result = (int)cmd.ExecuteScalar();
+                    //table.Load(reader);
+                    //reader.Close();
                 }
+                con.Close();
+                con.Dispose();
             }
+            return result;
         }
-        public int ExecuteNonQuery(string cmdText, List<SqlParameter> param = null) {
-            if (param == null) {
+        public int ExecuteNonQuery(string cmdText, List<SqlParameter> param = null)
+        {
+            if (param == null)
+            {
                 param = new List<SqlParameter>();
             }
             CommandType cmdType = CommandType.Text;
-            if (!cmdText.Contains(' ')) 
+            if (!cmdText.Contains(' '))
                 cmdType = CommandType.StoredProcedure;
             int result;
-            using (var con = new SqlConnection(ConnectionString)) {
+            using (var con = new SqlConnection(ConnectionString))
+            {
                 con.Open();
-                using (var cmd = con.CreateCommand()) {
+                using (var cmd = con.CreateCommand())
+                {
+                    //cmd.Connection
                     cmd.CommandText = cmdText;
                     cmd.CommandType = cmdType;
-                    foreach (var item in param) {
+                    foreach (var item in param)
+                    {
                         cmd.Parameters.Add(item);
                     }
                     result = cmd.ExecuteNonQuery();
@@ -92,10 +115,12 @@ namespace Hospital_Pilot
             return result;
         }
     }
-    public static class DataExtensions {
+
+    public static class DataExtensions
+    {
         public static List<T> GetList<T>(this SqlDatabase db, string cmdText, List<SqlParameter> param = null) where T : new()
         {
-            return db.GetDataTable(cmdText,param).To<T>();
+            return db.GetDataTable(cmdText, param).To<T>();
         }
         public static void SetFromRow(this object item, DataRow row)
         {

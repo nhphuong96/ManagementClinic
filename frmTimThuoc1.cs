@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DatabaseLib;
 
 namespace Hospital_Pilot
 {
@@ -84,6 +85,11 @@ namespace Hospital_Pilot
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Tìm gần đúng theo Mã thuốc, Tên thuốc và Đơn vị tính\nRiêng đơn giá nếu bỏ trống ô đầu sẽ tìm kiếm đơn giá nhỏ hơn hoặc bằng ô cuối và ngược lại", "Trợ giúp", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

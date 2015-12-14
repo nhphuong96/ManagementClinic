@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataAccess">
-      <HintPath>..\..\..\Downloads\2015_11_26_Win_Thu5_Ca03\Win_Thu5_Ca03\DataAccess\bin\Debug\DataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="DatabaseLib">
-      <HintPath>..\..\..\Downloads\2015_11_26_Win_Thu5_Ca03\Win_Thu5_Ca03\DataAccess\bin\Debug\DatabaseLib.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.BonusSkins.v15.2" />
     <Reference Include="DevExpress.Data.v15.2" />
     <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -71,6 +65,18 @@
   <ItemGroup>
     <Compile Include="BenhNhan.cs" />
     <Compile Include="DataAccess.cs" />
+    <Compile Include="frmCapThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapThuoc.Designer.cs">
+      <DependentUpon>frmCapThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChonThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChonThuoc.Designer.cs">
+      <DependentUpon>frmChonThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,14 @@
     <Compile Include="frmKhoThuoc.Designer.cs">
       <DependentUpon>frmKhoThuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelThuoc.cs" />
+    <Compile Include="NhanVien.cs" />
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -124,6 +138,12 @@
     <Compile Include="frmThemThuoc.Designer.cs">
       <DependentUpon>frmThemThuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemNhanVien.Designer.cs">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thuoc.cs" />
     <Compile Include="frmTimThuoc1.cs">
       <SubType>Form</SubType>
@@ -131,11 +151,26 @@
     <Compile Include="frmTimThuoc1.Designer.cs">
       <DependentUpon>frmTimThuoc1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTimKiemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiemNhanVien.Designer.cs">
+      <DependentUpon>frmTimKiemNhanVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCapThuoc.resx">
+      <DependentUpon>frmCapThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChonThuoc.resx">
+      <DependentUpon>frmChonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTicket.resx">
       <DependentUpon>frmTicket.cs</DependentUpon>
@@ -145,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhoThuoc.resx">
       <DependentUpon>frmKhoThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiemNhanVien.resx">
+      <DependentUpon>frmTimKiemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -168,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimThuoc1.resx">
       <DependentUpon>frmTimThuoc1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemNhanVien.resx">
+      <DependentUpon>frmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

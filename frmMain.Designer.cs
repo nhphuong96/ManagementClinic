@@ -189,6 +189,7 @@
             this.simpleButton5.Size = new System.Drawing.Size(86, 58);
             this.simpleButton5.TabIndex = 2;
             this.simpleButton5.Text = "Cấp thuốc";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // simpleButton3
             // 

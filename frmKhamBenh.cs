@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DatabaseLib;
 namespace Hospital_Pilot
 {
     public partial class frmKhamBenh : DevExpress.XtraEditors.XtraForm
@@ -15,7 +16,6 @@ namespace Hospital_Pilot
         frmTimKiemBacSi frmtimkiem;
         frmTimKiemNguoiBenh frmNguoiBenh = new frmTimKiemNguoiBenh();
         SqlDatabase db = new SqlDatabase();
-        BenhNhan tmpNguoiBenh;
 
         public frmKhamBenh()
         {
@@ -102,14 +102,13 @@ namespace Hospital_Pilot
             {
                 ThuocprintDocument.Print();
             }
-            DataAccess.UpdateGeneric(new { MABN = frmNguoiBenh.manguoibenh }, "CHANDOAN");
             tenNguoiBenh_textBox.Text = "";
             gioitinhBN_txt.Text = "";
             namsinh_textBox.Text = "";
             diachi_txt.Text = "";
             chandoan_txt.Text = "";
             loidan_txt.Text = "";
-            listView1.Clear();
+            listView1.Items.Clear();
         }
         public void TaoToaThuoc(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {

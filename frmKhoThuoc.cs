@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
+using DatabaseLib;
 namespace Hospital_Pilot
 {
     public partial class frmKhoThuoc : DevExpress.XtraEditors.XtraForm
@@ -16,14 +17,16 @@ namespace Hospital_Pilot
         SqlDatabase db = new SqlDatabase();
         frmThemThuoc frmThemThuoc;
         frmTimThuoc1 frmTimThuoc;
+        DataSet ds = new DataSet();
+        //List<Thuoc> data = new List<Thuoc>();
+        //public List<Thuoc> data = new List<Thuoc>();
         DataTable data;
-//public List<Thuoc> data = new List<Thuoc>();
         public frmKhoThuoc()
         {
             InitializeComponent();
 
         }
-
+        
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
@@ -33,7 +36,7 @@ namespace Hospital_Pilot
         {
             data = db.GetDataTable("SELECT * FROM THUOC");
             bindingSource.DataSource = data;
-            gridControl1.DataSource = bindingSource;
+
 
         }
 
@@ -47,7 +50,6 @@ namespace Hospital_Pilot
                 frmThemThuoc.ShowDialog();
                 data = db.GetDataTable("SELECT * FROM THUOC");
                 bindingSource.DataSource = data;
-                gridControl1.DataSource = bindingSource; 
             }
             else MessageBox.Show("Vui lòng bật Caplock để thực hiện việc thêm thuốc mới\nMở Caplock và chọn Thêm thuốc", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -79,12 +81,8 @@ namespace Hospital_Pilot
             frmTimThuoc.ShowDialog();
         }
 
-        private void Sua_btn_Click(object sender, EventArgs e)
-        {
-            data.AcceptChanges();
-            bindingSource.DataSource = data;
-            gridControl1.DataSource = bindingSource; 
-        }
+
+
 
 
     }
