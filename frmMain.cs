@@ -33,7 +33,7 @@ namespace Hospital_Pilot
                 boxKhamBenh.Enabled = false;
                 boxThuoc.Enabled = false;
                 boxNhanVien.Enabled = false;
-                Setting_btn.Enabled = false;
+                //Setting_btn.Enabled = false;
                 Logout_btn.Enabled = false;
         }
 
@@ -48,7 +48,7 @@ namespace Hospital_Pilot
                 if (frmLog.ChucVu == "NV")
                 {
                     boxTicket.Enabled = true;
-                    Setting_btn.Enabled = true;
+                    //Setting_btn.Enabled = true;
                     Login_btn.Enabled = false;
                     Logout_btn.Enabled = true;
                 }
@@ -56,21 +56,21 @@ namespace Hospital_Pilot
                 {
                     boxThuoc.Enabled = true;
                     boxNhanVien.Enabled = true;
-                    Setting_btn.Enabled = true;
+                    //Setting_btn.Enabled = true;
                     Login_btn.Enabled = false;
                     Logout_btn.Enabled = true;
                 }
                 else if (frmLog.ChucVu == "DS")
                 {
                     boxThuoc.Enabled = true;
-                    Setting_btn.Enabled = true;
+                    //Setting_btn.Enabled = true;
                     Login_btn.Enabled = false;
                     Logout_btn.Enabled = true;
                 }
                 else
                 {
                     boxKhamBenh.Enabled = true;
-                    Setting_btn.Enabled = true;
+                    //Setting_btn.Enabled = true;
                     Login_btn.Enabled = false;
                     Logout_btn.Enabled = true;
                 }
@@ -94,7 +94,7 @@ namespace Hospital_Pilot
             boxKhamBenh.Enabled = false;
             boxThuoc.Enabled = false;
             boxNhanVien.Enabled = false;
-            Setting_btn.Enabled = false;
+            //Setting_btn.Enabled = false;
             Logout_btn.Enabled = false;
             Login_btn.Enabled = true;
             Exit_btn.Enabled = true;
