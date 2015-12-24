@@ -138,5 +138,11 @@ namespace Hospital_Pilot
             graphic.DrawString("TỔNG CỘNG: " + Total.ToString()+" đồng", new Font("Times New Roman", 28), new SolidBrush(Color.Black), startX, startY + offset);
             graphic.DrawString("    Người cấp thuốc".PadRight(80) + "Người nhận thuốc", new Font("Times New Roman", 14), new SolidBrush(Color.Black), startX, startY + offset +50);
         }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0) return;
+            listView1.SelectedItems[0].Remove();
+        }
     }
 }

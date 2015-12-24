@@ -86,10 +86,8 @@ namespace Hospital_Pilot
 
         private void Logout_btn_Click(object sender, EventArgs e)
         {
-            progress_logout.Visible = true;
             var t = Task.Delay(2000);
             t.Wait();
-            progress_logout.Visible = false;
             _username = "";
             isConnected = false;
             boxTicket.Enabled = false;
@@ -130,6 +128,22 @@ namespace Hospital_Pilot
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            frmCapThuoc frmCapThuoc = new frmCapThuoc();
+            frmCapThuoc.TopLevel = true;
+            frmCapThuoc.ShowInTaskbar = false;
+            frmCapThuoc.ShowDialog();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frmNhanVien = new frmNhanVien();
+            frmNhanVien.TopLevel = true;
+            frmNhanVien.ShowInTaskbar = false;
+            frmNhanVien.ShowDialog();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
 
         }

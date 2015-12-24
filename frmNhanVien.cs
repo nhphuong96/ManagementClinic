@@ -50,7 +50,7 @@ namespace Hospital_Pilot
             }
             else
             {
-                DialogResult result = MessageBox.Show("Bạn có thật sự muốn xóa Thuốc này?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Bạn có thật sự muốn xóa Nhân viên này?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     DataAccess.DeleteGeneric(new { MANV = gridView1.GetFocusedRowCellValue(MANV) }, "NHANVIEN");

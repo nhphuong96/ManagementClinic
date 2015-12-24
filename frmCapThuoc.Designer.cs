@@ -42,6 +42,7 @@
             this.SOLUONG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DONVITINH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DONGIA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TONGCONG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.thuoc_txt = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
@@ -49,7 +50,6 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.donvitinh_combobox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupThemThuoc = new DevExpress.XtraEditors.GroupControl();
-            this.TONGCONG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ThuocprintDocument = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.tennguoibenh_txt.Properties)).BeginInit();
@@ -192,6 +192,11 @@
             this.DONGIA.Text = "Đơn giá";
             this.DONGIA.Width = 87;
             // 
+            // TONGCONG
+            // 
+            this.TONGCONG.Text = "Tổng cộng";
+            this.TONGCONG.Width = 88;
+            // 
             // thuoc_txt
             // 
             this.thuoc_txt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -209,6 +214,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(85, 34);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Xóa thuốc";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // simpleButton3
             // 
@@ -268,11 +274,6 @@
             this.groupThemThuoc.Size = new System.Drawing.Size(430, 154);
             this.groupThemThuoc.TabIndex = 40;
             this.groupThemThuoc.Text = "Thêm thuốc";
-            // 
-            // TONGCONG
-            // 
-            this.TONGCONG.Text = "Tổng cộng";
-            this.TONGCONG.Width = 88;
             // 
             // labelControl1
             // 

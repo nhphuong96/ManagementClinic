@@ -38,7 +38,6 @@
             this.Logout_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Exit_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Login_btn = new DevExpress.XtraEditors.SimpleButton();
-            this.Setting_btn = new DevExpress.XtraEditors.SimpleButton();
             this.boxKhamBenh = new System.Windows.Forms.GroupBox();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.boxThuoc = new System.Windows.Forms.GroupBox();
@@ -50,7 +49,7 @@
             this.boxTicket = new System.Windows.Forms.GroupBox();
             this.Ticket_btn = new DevExpress.XtraEditors.SimpleButton();
             this.mdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.progress_logout = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.boxKhamBenh.SuspendLayout();
@@ -81,7 +80,6 @@
             this.panelControl1.Controls.Add(this.Logout_btn);
             this.panelControl1.Controls.Add(this.Exit_btn);
             this.panelControl1.Controls.Add(this.Login_btn);
-            this.panelControl1.Controls.Add(this.Setting_btn);
             this.panelControl1.Controls.Add(this.boxKhamBenh);
             this.panelControl1.Controls.Add(this.boxThuoc);
             this.panelControl1.Controls.Add(this.boxNhanVien);
@@ -98,7 +96,7 @@
             this.Logout_btn.Appearance.Options.UseFont = true;
             this.Logout_btn.Image = ((System.Drawing.Image)(resources.GetObject("Logout_btn.Image")));
             this.Logout_btn.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.Logout_btn.Location = new System.Drawing.Point(815, 24);
+            this.Logout_btn.Location = new System.Drawing.Point(787, 25);
             this.Logout_btn.Name = "Logout_btn";
             this.Logout_btn.Size = new System.Drawing.Size(78, 57);
             this.Logout_btn.TabIndex = 7;
@@ -111,7 +109,7 @@
             this.Exit_btn.Appearance.Options.UseFont = true;
             this.Exit_btn.Image = ((System.Drawing.Image)(resources.GetObject("Exit_btn.Image")));
             this.Exit_btn.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.Exit_btn.Location = new System.Drawing.Point(899, 24);
+            this.Exit_btn.Location = new System.Drawing.Point(895, 26);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Size = new System.Drawing.Size(59, 57);
             this.Exit_btn.TabIndex = 6;
@@ -124,24 +122,12 @@
             this.Login_btn.Appearance.Options.UseFont = true;
             this.Login_btn.Image = ((System.Drawing.Image)(resources.GetObject("Login_btn.Image")));
             this.Login_btn.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.Login_btn.Location = new System.Drawing.Point(731, 24);
+            this.Login_btn.Location = new System.Drawing.Point(682, 24);
             this.Login_btn.Name = "Login_btn";
             this.Login_btn.Size = new System.Drawing.Size(78, 57);
             this.Login_btn.TabIndex = 5;
             this.Login_btn.Text = "Đăng Nhập";
             this.Login_btn.Click += new System.EventHandler(this.Login_btn_Click);
-            // 
-            // Setting_btn
-            // 
-            this.Setting_btn.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Setting_btn.Appearance.Options.UseFont = true;
-            this.Setting_btn.Image = ((System.Drawing.Image)(resources.GetObject("Setting_btn.Image")));
-            this.Setting_btn.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.Setting_btn.Location = new System.Drawing.Point(662, 24);
-            this.Setting_btn.Name = "Setting_btn";
-            this.Setting_btn.Size = new System.Drawing.Size(63, 57);
-            this.Setting_btn.TabIndex = 4;
-            this.Setting_btn.Text = "Cài đặt";
             // 
             // boxKhamBenh
             // 
@@ -226,6 +212,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(71, 58);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "Bác sĩ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
@@ -239,6 +226,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 58);
             this.simpleButton2.TabIndex = 1;
             this.simpleButton2.Text = "Nhân viên";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // boxTicket
             // 
@@ -271,19 +259,9 @@
             // 
             this.mdiManager.MdiParent = this;
             // 
-            // progress_logout
+            // printDialog1
             // 
-            this.progress_logout.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.progress_logout.Appearance.Options.UseBackColor = true;
-            this.progress_logout.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.progress_logout.Description = "Logging out ...";
-            this.progress_logout.Location = new System.Drawing.Point(350, 212);
-            this.progress_logout.Name = "progress_logout";
-            this.progress_logout.Size = new System.Drawing.Size(246, 66);
-            this.progress_logout.TabIndex = 2;
-            this.progress_logout.Text = "progressPanel1";
-            this.progress_logout.Visible = false;
-            this.progress_logout.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
+            this.printDialog1.UseEXDialog = true;
             // 
             // frmMain
             // 
@@ -292,7 +270,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.progress_logout);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
@@ -335,11 +312,10 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton Login_btn;
-        private DevExpress.XtraEditors.SimpleButton Setting_btn;
         private DevExpress.XtraEditors.SimpleButton Exit_btn;
         private DevExpress.XtraEditors.SimpleButton Logout_btn;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdiManager;
-        private DevExpress.XtraWaitForm.ProgressPanel progress_logout;
+        private System.Windows.Forms.PrintDialog printDialog1;
 
 
 
