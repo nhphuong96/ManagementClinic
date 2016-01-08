@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTicket));
             this.tenNguoiBenh_textBox = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -52,6 +53,7 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tenNguoiBenh_textBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.namsinh_textBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBN)).BeginInit();
@@ -315,6 +317,15 @@
             this.labelControl10.TabIndex = 4;
             this.labelControl10.Text = "Đơn vị";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(278, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(558, 555);
+            this.richTextBox1.TabIndex = 11;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // frmTicket
             // 
             this.Appearance.BackColor = System.Drawing.Color.DarkGray;
@@ -322,6 +333,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 555);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupBN);
             this.MaximizeBox = false;
@@ -372,5 +384,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private DevExpress.XtraEditors.TextEdit diachi_txt;
         private DevExpress.XtraEditors.LabelControl diachi_label;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
